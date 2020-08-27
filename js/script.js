@@ -14,6 +14,8 @@ $(document).ready(function(){
             url: "https://flynn.boolean.careers/exercises/api/random/int",
             method: "GET",
             success: function (risposta) {
+                // il numero random compare all'interno del quadrato cliccato
+                casella.text(risposta.response);
                 // se il numero random generato è <= 5, aggiungo la classe yellow al quadrato cliccato (casella)
                 if(risposta.response <=5){
                     casella.addClass("yellow");
